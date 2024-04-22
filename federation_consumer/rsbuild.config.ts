@@ -5,7 +5,7 @@ import { ModuleFederationPlugin } from '@module-federation/enhanced/rspack';
 
 export default defineConfig({
   server: {
-    port: 2000,
+    port: 8080,
   },
   tools: {
     rspack: (config, { appendPlugins }) => {
@@ -14,7 +14,7 @@ export default defineConfig({
           name: 'federation_consumer',
           remotes: {
             federation_provider:
-              'federation_provider@https://astroapp.jollymushroom-6a8d973c.eastus.azurecontainerapps.io/mf-manifest.json',
+              'federation_provider@https://mfe-provider.agreeablesky-b36fc062.eastus2.azurecontainerapps.io/mf-manifest.json',
           },
           shared: ['react', 'react-dom'],
         }),

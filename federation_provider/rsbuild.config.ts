@@ -5,14 +5,14 @@ import { ModuleFederationPlugin } from '@module-federation/enhanced/rspack';
 
 export default defineConfig({
   server: {
-    port: 3000,
+    port: 8080,
   },
   dev: {
     // It is necessary to configure assetPrefix, and in the production environment, you need to configure output.assetPrefix
-    assetPrefix: 'http://localhost:3000',
+    assetPrefix: 'http://localhost:8080',
   },
   output: {
-    assetPrefix: 'https://astroapp.jollymushroom-6a8d973c.eastus.azurecontainerapps.io',
+    assetPrefix: 'https://mfe-provider.agreeablesky-b36fc062.eastus2.azurecontainerapps.io',
   },
   tools: {
     rspack: (config, { appendPlugins }) => {
